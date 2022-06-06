@@ -4,9 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Spartans</title>
 </head>
 <body>
+    <header>
+
+
+
+
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#vid">home</a></li>
+                <li><a href="#contents">features</a></li>
+                <li><a href="#services">Projects</a></li>
+                <li><a href="#experience">Experiance</a></li>
+                <li class="logo">
+                  <a href="#">
+                    <img src="logo-white.png" class="white" alt="">
+                    <img src="logo-white.png" class="black" alt="">
+                  </a>
+                </li>
+                <li><a href="#prices">pricing</a></li>
+                <li><a href="#testimonials">Our client</a></li>
+                <li><a href="#blog"> blog</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <a class="nav-icon" href="javaScript:void(0);"><span></span><span></span><span></span></a>
+        </nav>
+  
+                         <div class="bg-video wow fadeInUp" data-wow-delay="1s" id="vid">
+                          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="heroVideo">
+                    <source src="king-kong.mp4" type="video/mp4" class="">
+                  </video>
+  
+  
+              </div>
+    </header>
+  
+  
+  
+    <div class="full-nav">
+        <div class="logo"><a href="#"><img src="logo2.png" alt=""></a></div>
+        <nav class="nav2">
+            <ul>
+                <li><a href="#"><span>01. </span>Home</a></li>
+                <li><a href="#"><span>02. </span>Features</a></li>
+                <li><a href="#"><span>03. </span>Team</a></li>
+                <li><a href="#"><span>04. </span>Work</a></li>
+                <li><a href="#"><span>05. </span>Pricing</a></li>
+                <li><a href="#"><span>06. </span>Client</a></li>
+                <li><a href="#"><span>07. </span>Blog</a></li>
+                <li><a href="#"><span>08. </span>Contact</a></li>
+            </ul>
+        </nav>
+  
+  
+        <div class="corner-circle">
+            <a class="nav-close" href="javaScript:void(0);"><span></span><span></span></a>
+        </div>
+  
+    </div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+   
+  <script>
+  
+  
+    $(document).ready(function(){
+      $(".nav-icon").click(function(){
+        $(".full-nav").addClass("open");
+      });
+      $(".nav-close").click(function(){
+        $(".full-nav").removeClass("open");
+      });
+  
+      $(window).scroll(function () {
+          var sc = $(window).scrollTop();
+          if (sc > 100) {
+              $(".nav").addClass("sticky");
+          } else {
+              $(".nav").removeClass("sticky");
+          }
+  
+      });
+  
     
+    });
+  
+  
+  
+  </script>
+  <script>
+  
+      new WOW().init();
+  </script>
 </body>
 </html>
